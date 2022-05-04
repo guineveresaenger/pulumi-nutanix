@@ -18,12 +18,12 @@ import (
 	"fmt"
 	"path/filepath"
 
+	"github.com/MitchellGerdisch/pulumi-nutanix/provider/pkg/version"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
-	"github.com/MitchellGerdisch/pulumi-nutanix/provider/pkg/version"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
-	"github.com/nutanix/terraform-provider-nutanix/nutanix"
+	"github.com/terraform-providers/terraform-provider-nutanix/nutanix"
 )
 
 // all of the token components used below.
@@ -80,7 +80,7 @@ func Provider() tfbridge.ProviderInfo {
 		Repository: "https://github.com/MitchellGerdisch/pulumi-nutanix",
 		// The GitHub Org for the provider - defaults to `terraform-providers`
 		GitHubOrg: "",
-		Config:    map[string]*tfbridge.SchemaInfo{
+		Config: map[string]*tfbridge.SchemaInfo{
 			// Add any required configuration here, or remove the example below if
 			// no additional points are required.
 			// "region": {
@@ -91,7 +91,7 @@ func Provider() tfbridge.ProviderInfo {
 			// },
 		},
 		PreConfigureCallback: preConfigureCallback,
-		Resources:            map[string]*tfbridge.ResourceInfo{
+		Resources: map[string]*tfbridge.ResourceInfo{
 			// Map each resource in the Terraform provider to a Pulumi type. Two examples
 			// are below - the single line form is the common case. The multi-line form is
 			// needed only if you wish to override types or other default options.
