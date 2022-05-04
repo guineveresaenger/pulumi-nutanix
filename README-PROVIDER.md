@@ -1,6 +1,6 @@
-# Foo Resource Provider
+# Nutanix Resource Provider
 
-The Foo Resource Provider lets you manage [Foo](http://example.com) resources.
+The Nutanix Resource Provider lets you manage [Nutanix](http://example.com) resources.
 
 ## Installing
 
@@ -41,7 +41,7 @@ go get github.com/pulumi/pulumi-foo/sdk/go/...
 To use from .NET, install using `dotnet add package`:
 
 ```bash
-dotnet add package Pulumi.Foo
+dotnet add package Pulumi.Nutanix
 ```
 
 ## Configuration
